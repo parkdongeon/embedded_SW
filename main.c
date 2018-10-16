@@ -12,11 +12,25 @@ void preprocess()
 	printf("do some preporcessing\n");
 }
 
+void turdo_on()
+{
+	printf("turbo on\n");
+}
+
+void turdo_off()
+{
+	printf("turbo off\n");
+
+}
+
 int main()
 {
+	preprocess();
+	turbo_on()
 	Foo1();
 	Foo2();
-	preprocess();
+
+	turbo_off();
 	postprocess();
 
 	return 0;
