@@ -1,6 +1,11 @@
 CFLAGS= -Wall
-OBJS = func1.o myapp.o
-TARGET = myapp
+OBJS = func1.o func2.o main.o
+TARGET = main
 
 $(TARGET) : $(OBJS)
-	$(CC)
+	$(CC) -o $(TARGET) $(OBJS)
+
+%.o : %.c
+	$(CC) -c $(CFLAGS) $< -o $@
+clean : 
+	rm -f $(TARGET) $(OBJS)
